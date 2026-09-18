@@ -1,0 +1,10 @@
+During the live demo, add this block to config.py (create the file) and push, to trigger Gitleaks:
+
+AWS_ACCESS_KEY_ID = "AKIAIOSFODNN7EXAMPLE"
+AWS_SECRET_ACCESS_KEY = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+
+Note: these are AWS's own public documentation placeholder values (used in every AWS SDK example),
+not a real key. Gitleaks matches on the key FORMAT (AKIA... pattern), so it still fires — no real
+credential is ever exposed. Never paste an actual key into a public repo, even for a demo.
+
+After showing the failed build + Slack alert, delete config.py (or empty it) and push again to show green.
